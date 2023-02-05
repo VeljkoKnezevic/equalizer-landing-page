@@ -1,0 +1,224 @@
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: "IBM Plex Sans", sans-serif;
+  background: url(../assets/bg-main-mobile.png);
+  background-position: top -104px left 159px;
+  overflow: auto;
+}
+
+.header,
+.main__hero,
+.footer {
+  margin: 0 24px;
+}
+
+.header {
+  margin-top: 40px;
+}
+.header__background {
+  display: none;
+}
+
+.main__hero {
+  margin-top: 64px;
+  margin-bottom: 164px;
+}
+.main__hero__heading {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: -0.454545px;
+  color: #191826;
+  margin: 0;
+}
+.main__hero__para {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #191826;
+  margin: 0;
+  margin-top: 20px;
+}
+.main__phone {
+  display: grid;
+  place-items: center;
+  background: url(../assets/bg-pattern-2.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #191826;
+  height: 600px;
+  position: relative;
+}
+.main__phone img {
+  position: absolute;
+  top: -96px;
+  width: 209px;
+}
+.main__premium {
+  position: absolute;
+  margin-top: -100px;
+  z-index: 1;
+  background: #fa7453;
+  border-radius: 12px;
+  overflow: auto;
+}
+.main__premium__wrapper {
+  margin: 0 37px;
+}
+.main__premium .price-and-button-wrapper {
+  margin: 0 42px;
+}
+.main__premium__heading {
+  margin: 0;
+  margin-top: 48px;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  color: #fcfaf9;
+}
+.main__premium__para {
+  margin: 0;
+  margin-top: 12px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: #fcfaf9;
+}
+.main__premium__price {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: -0.2px;
+  color: #fcfaf9;
+  margin-top: 42px;
+}
+.main__premium__price--large {
+  font-weight: 700;
+  font-size: 65px;
+  line-height: 52px;
+  letter-spacing: normal;
+  color: #fcfaf9;
+  margin-right: 16px;
+}
+.main__premium__ios, .main__premium__android {
+  padding: 14px;
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+  text-align: center;
+  letter-spacing: -0.18px;
+  width: 100%;
+  border-radius: 12px;
+}
+.main__premium__ios {
+  margin-top: 32px;
+  border: 2px solid #191826;
+  background-color: #191826;
+  color: #fcfaf9;
+}
+.main__premium__android {
+  margin-top: 16px;
+  margin-bottom: 48px;
+  border: 2px solid #fcfaf9;
+  background-color: #fcfaf9;
+  color: #191826;
+}
+
+.footer {
+  margin-top: 492px;
+}
+.footer__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #191826;
+}
+.footer__text--dark {
+  font-weight: 700;
+}
+.footer__images {
+  margin-top: 64px;
+  margin-bottom: 80px;
+}
+.footer__image + .footer__image {
+  margin-left: 20px;
+}
+
+@media (min-width: 700px) {
+  body {
+    background-image: url(../assets/bg-main-tablet.png);
+    background-position: left -254px top -112px;
+  }
+  .header,
+.main,
+.footer {
+    margin-left: 33px;
+    margin-right: 39px;
+  }
+  .header {
+    margin-top: 61px;
+  }
+  .header__background {
+    display: inline;
+    position: absolute;
+    width: 266px;
+    height: 400px;
+    top: -32px;
+    right: -35px;
+    overflow: hidden;
+  }
+  .main__hero {
+    width: 74%;
+    margin: 95px 0 256px;
+  }
+  .main__hero__heading {
+    font-size: 64px;
+    line-height: 64px;
+    letter-spacing: -0.727273px;
+  }
+  .main__hero__para {
+    margin-top: 28px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .main__phone {
+    display: block;
+    margin-left: 25px;
+    margin-right: -25px;
+  }
+  .main__phone .phone {
+    margin-left: 64px;
+    top: -138px;
+    width: 270px;
+  }
+  .main__premium {
+    width: 52%;
+    margin-top: -450px;
+    margin-left: 272px;
+  }
+  .main__premium__wrapper {
+    margin: 0 48px;
+  }
+  .main__premium .price-and-button-wrapper {
+    margin: 0 54px 0 49px;
+  }
+  .footer {
+    margin-top: 176px;
+  }
+}/*# sourceMappingURL=styles.css.map */

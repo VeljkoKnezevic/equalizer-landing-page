@@ -1,0 +1,264 @@
+$blue: #66e2dc;
+$red: #fa7453;
+$orange: #ffb964;
+$white: #fcfaf9;
+$black: #191826;
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: "IBM Plex Sans", sans-serif;
+  background: url(../assets/bg-main-mobile.png);
+  background-position: top -104px left 159px;
+  overflow: auto;
+}
+
+.header,
+.main__hero,
+.footer {
+  margin: 0 24px;
+}
+
+.header {
+  margin-top: 40px;
+
+  &__background {
+    display: none;
+  }
+}
+
+.main {
+  &__hero {
+    margin-top: 64px;
+    margin-bottom: 164px;
+
+    &__heading {
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 48px;
+      letter-spacing: -0.454545px;
+      color: $black;
+      margin: 0;
+    }
+
+    &__para {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 26px;
+      color: $black;
+      margin: 0;
+      margin-top: 20px;
+    }
+  }
+
+  &__phone {
+    display: grid;
+    place-items: center;
+    background: url(../assets/bg-pattern-2.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: $black;
+    height: 600px;
+    position: relative;
+
+    img {
+      position: absolute;
+      top: -96px;
+      width: 209px;
+    }
+  }
+
+  &__premium {
+    position: absolute;
+    margin-top: -100px;
+    z-index: 1;
+    background: $red;
+    border-radius: 12px;
+    overflow: auto;
+
+    &__wrapper {
+      margin: 0 37px;
+    }
+
+    .price-and-button-wrapper {
+      margin: 0 42px;
+    }
+
+    &__heading {
+      margin: 0;
+      margin-top: 48px;
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 40px;
+      color: $white;
+    }
+
+    &__para {
+      margin: 0;
+      margin-top: 12px;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 28px;
+      color: $white;
+    }
+
+    &__price {
+      display: flex;
+      align-items: center;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 32px;
+      letter-spacing: -0.2px;
+      color: $white;
+      margin-top: 42px;
+
+      &--large {
+        font-weight: 700;
+        font-size: 65px;
+        line-height: 52px;
+        letter-spacing: normal;
+        color: $white;
+        margin-right: 16px;
+      }
+    }
+
+    &__ios,
+    &__android {
+      padding: 14px;
+      font-family: "IBM Plex Sans";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 32px;
+      text-align: center;
+      letter-spacing: -0.18px;
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    &__ios {
+      margin-top: 32px;
+      border: 2px solid $black;
+      background-color: $black;
+      color: $white;
+    }
+
+    &__android {
+      margin-top: 16px;
+      margin-bottom: 48px;
+      border: 2px solid $white;
+      background-color: $white;
+      color: $black;
+    }
+  }
+}
+
+.footer {
+  margin-top: 492px;
+
+  &__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #191826;
+
+    &--dark {
+      font-weight: 700;
+    }
+  }
+
+  &__images {
+    margin-top: 64px;
+    margin-bottom: 80px;
+  }
+
+  &__image + &__image {
+    margin-left: 20px;
+  }
+}
+
+@media (min-width: 700px) {
+  body {
+    background-image: url(../assets/bg-main-tablet.png);
+    background-position: left -254px top -112px;
+  }
+
+  .header,
+  .main,
+  .footer {
+    margin-left: 33px;
+    margin-right: 39px;
+  }
+
+  .header {
+    margin-top: 61px;
+    &__background {
+      display: inline;
+      position: absolute;
+      width: 266px;
+      height: 400px;
+      top: -32px;
+      right: -35px;
+      overflow: hidden;
+    }
+  }
+
+  .main {
+    &__hero {
+      width: 74%;
+      margin: 95px 0 256px;
+
+      &__heading {
+        font-size: 64px;
+        line-height: 64px;
+        letter-spacing: -0.727273px;
+      }
+
+      &__para {
+        margin-top: 28px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+      }
+    }
+
+    &__phone {
+      display: block;
+      margin-left: 25px;
+      margin-right: -25px;
+      .phone {
+        margin-left: 64px;
+        top: -138px;
+        width: 270px;
+      }
+    }
+
+    &__premium {
+      width: 52%;
+      margin-top: -450px;
+      margin-left: 272px;
+
+      &__wrapper {
+        margin: 0 48px;
+      }
+
+      .price-and-button-wrapper {
+        margin: 0 54px 0 49px;
+      }
+    }
+  }
+
+  .footer {
+    margin-top: 176px;
+  }
+}
