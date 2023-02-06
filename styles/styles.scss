@@ -1,8 +1,8 @@
-$blue: #66e2dc;
-$red: #fa7453;
-$orange: #ffb964;
-$white: #fcfaf9;
-$black: #191826;
+$blue: hsl(177, 68%, 64%);
+$red: hsl(12, 94%, 65%);
+$orange: hsl(33, 100%, 70%);
+$white: hsl(20, 33%, 98%);
+$black: hsl(244, 23%, 12%);
 
 html {
   box-sizing: border-box;
@@ -44,8 +44,8 @@ body {
 
     &__heading {
       font-weight: 700;
-      font-size: 40px;
-      line-height: 48px;
+      font-size: 2.5rem;
+      line-height: 3rem;
       letter-spacing: -0.454545px;
       color: $black;
       margin: 0;
@@ -53,8 +53,8 @@ body {
 
     &__para {
       font-weight: 400;
-      font-size: 16px;
-      line-height: 26px;
+      font-size: 1rem;
+      line-height: 1.625rem;
       color: $black;
       margin: 0;
       margin-top: 20px;
@@ -70,6 +70,7 @@ body {
     background-color: $black;
     height: 600px;
     position: relative;
+    border-radius: 12px;
 
     img {
       position: absolute;
@@ -98,8 +99,8 @@ body {
       margin: 0;
       margin-top: 48px;
       font-weight: 700;
-      font-size: 32px;
-      line-height: 40px;
+      font-size: 2rem;
+      line-height: 2.5rem;
       color: $white;
     }
 
@@ -107,8 +108,8 @@ body {
       margin: 0;
       margin-top: 12px;
       font-weight: 400;
-      font-size: 18px;
-      line-height: 28px;
+      font-size: 1.125rem;
+      line-height: 1.75rem;
       color: $white;
     }
 
@@ -116,16 +117,16 @@ body {
       display: flex;
       align-items: center;
       font-weight: 400;
-      font-size: 20px;
-      line-height: 32px;
+      font-size: 1.25rem;
+      line-height: 2rem;
       letter-spacing: -0.2px;
       color: $white;
       margin-top: 42px;
 
       &--large {
         font-weight: 700;
-        font-size: 65px;
-        line-height: 52px;
+        font-size: 4.063rem;
+        line-height: 3.25rem;
         letter-spacing: normal;
         color: $white;
         margin-right: 16px;
@@ -138,8 +139,8 @@ body {
       font-family: "IBM Plex Sans";
       font-style: normal;
       font-weight: 700;
-      font-size: 18px;
-      line-height: 32px;
+      font-size: 1.125rem;
+      line-height: 2rem;
       text-align: center;
       letter-spacing: -0.18px;
       width: 100%;
@@ -151,6 +152,12 @@ body {
       border: 2px solid $black;
       background-color: $black;
       color: $white;
+      border: none;
+
+      &:hover {
+        background-color: $blue;
+        cursor: pointer;
+      }
     }
 
     &__android {
@@ -159,6 +166,12 @@ body {
       border: 2px solid $white;
       background-color: $white;
       color: $black;
+      border: none;
+
+      &:hover {
+        background-color: $orange;
+        cursor: pointer;
+      }
     }
   }
 }
@@ -168,8 +181,8 @@ body {
 
   &__text {
     font-weight: 400;
-    font-size: 16px;
-    line-height: 26px;
+    font-size: 1rem;
+    line-height: 1.625rem;
     color: #191826;
 
     &--dark {
@@ -184,6 +197,12 @@ body {
 
   &__image + &__image {
     margin-left: 20px;
+  }
+
+  &__image:hover {
+    cursor: pointer;
+    filter: invert(72%) sepia(32%) saturate(7223%) hue-rotate(326deg)
+      brightness(101%) contrast(96%);
   }
 }
 
@@ -219,16 +238,16 @@ body {
       margin: 95px 0 256px;
 
       &__heading {
-        font-size: 64px;
-        line-height: 64px;
+        font-size: 4rem;
+        line-height: 4rem;
         letter-spacing: -0.727273px;
       }
 
       &__para {
         margin-top: 28px;
         font-weight: 400;
-        font-size: 18px;
-        line-height: 28px;
+        font-size: 1.125rem;
+        line-height: 1.75rem;
       }
     }
 
@@ -260,5 +279,138 @@ body {
 
   .footer {
     margin-top: 176px;
+    margin-bottom: 85px;
+
+    &__content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__text {
+      width: 53%;
+    }
+
+    &__images {
+      margin: 0;
+      display: flex;
+    }
+
+    &__image {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    background-image: url(../assets/bg-main-desktop.png);
+  }
+
+  .header,
+  .main,
+  .footer {
+    margin-left: 165px;
+    margin-right: 165px;
+  }
+
+  .header {
+    &__background {
+      top: -40px;
+      right: 0;
+      width: 312px;
+      height: 468px;
+    }
+  }
+
+  .main {
+    &__hero {
+      width: 78%;
+      margin: 127px 0 321px;
+
+      &__heading {
+        font-size: 5.5rem;
+        line-height: 5.5rem;
+      }
+
+      &__para {
+        font-size: 1.25rem;
+        line-height: 2.125rem;
+      }
+    }
+
+    &__phone {
+      margin-left: 0;
+      margin-right: 0;
+      background-position: top -40px left 335px;
+
+      .phone {
+        margin-left: 102px;
+        width: 312px;
+        top: -213px;
+      }
+    }
+
+    &__premium {
+      width: 31%;
+      margin-left: 569px;
+      margin-top: -510px;
+
+      &__wrapper {
+        margin: 0 54px 0 59px;
+      }
+
+      .price-and-button-wrapper {
+        margin: 0 54px 0 59px;
+      }
+
+      &__heading {
+        font-size: 2.5rem;
+        line-height: 3.25rem;
+        margin-top: 58px;
+      }
+
+      &__para {
+        margin-top: 22px;
+        font-size: 1.25rem;
+        line-height: 2.125rem;
+      }
+
+      &__price {
+        margin-top: 39px;
+      }
+
+      &__android {
+        border: none;
+      }
+
+      &__ios {
+        margin-top: 46px;
+        border: none;
+      }
+    }
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 202px;
+    margin-bottom: 91px;
+
+    &__logo {
+      width: 146px;
+      height: 32px;
+    }
+
+    &__text {
+      margin: 0;
+      width: 366px;
+    }
+
+    &__images {
+      margin-left: 359px;
+      width: 100px;
+    }
   }
 }

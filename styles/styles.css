@@ -36,17 +36,17 @@ body {
 }
 .main__hero__heading {
   font-weight: 700;
-  font-size: 40px;
-  line-height: 48px;
+  font-size: 2.5rem;
+  line-height: 3rem;
   letter-spacing: -0.454545px;
-  color: #191826;
+  color: hsl(244deg, 23%, 12%);
   margin: 0;
 }
 .main__hero__para {
   font-weight: 400;
-  font-size: 16px;
-  line-height: 26px;
-  color: #191826;
+  font-size: 1rem;
+  line-height: 1.625rem;
+  color: hsl(244deg, 23%, 12%);
   margin: 0;
   margin-top: 20px;
 }
@@ -56,9 +56,10 @@ body {
   background: url(../assets/bg-pattern-2.svg);
   background-repeat: no-repeat;
   background-position: center;
-  background-color: #191826;
+  background-color: hsl(244deg, 23%, 12%);
   height: 600px;
   position: relative;
+  border-radius: 12px;
 }
 .main__phone img {
   position: absolute;
@@ -69,7 +70,7 @@ body {
   position: absolute;
   margin-top: -100px;
   z-index: 1;
-  background: #fa7453;
+  background: hsl(12deg, 94%, 65%);
   border-radius: 12px;
   overflow: auto;
 }
@@ -83,34 +84,34 @@ body {
   margin: 0;
   margin-top: 48px;
   font-weight: 700;
-  font-size: 32px;
-  line-height: 40px;
-  color: #fcfaf9;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  color: hsl(20deg, 33%, 98%);
 }
 .main__premium__para {
   margin: 0;
   margin-top: 12px;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 28px;
-  color: #fcfaf9;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  color: hsl(20deg, 33%, 98%);
 }
 .main__premium__price {
   display: flex;
   align-items: center;
   font-weight: 400;
-  font-size: 20px;
-  line-height: 32px;
+  font-size: 1.25rem;
+  line-height: 2rem;
   letter-spacing: -0.2px;
-  color: #fcfaf9;
+  color: hsl(20deg, 33%, 98%);
   margin-top: 42px;
 }
 .main__premium__price--large {
   font-weight: 700;
-  font-size: 65px;
-  line-height: 52px;
+  font-size: 4.063rem;
+  line-height: 3.25rem;
   letter-spacing: normal;
-  color: #fcfaf9;
+  color: hsl(20deg, 33%, 98%);
   margin-right: 16px;
 }
 .main__premium__ios, .main__premium__android {
@@ -118,8 +119,8 @@ body {
   font-family: "IBM Plex Sans";
   font-style: normal;
   font-weight: 700;
-  font-size: 18px;
-  line-height: 32px;
+  font-size: 1.125rem;
+  line-height: 2rem;
   text-align: center;
   letter-spacing: -0.18px;
   width: 100%;
@@ -127,16 +128,26 @@ body {
 }
 .main__premium__ios {
   margin-top: 32px;
-  border: 2px solid #191826;
-  background-color: #191826;
-  color: #fcfaf9;
+  border: 2px solid hsl(244deg, 23%, 12%);
+  background-color: hsl(244deg, 23%, 12%);
+  color: hsl(20deg, 33%, 98%);
+  border: none;
+}
+.main__premium__ios:hover {
+  background-color: hsl(177deg, 68%, 64%);
+  cursor: pointer;
 }
 .main__premium__android {
   margin-top: 16px;
   margin-bottom: 48px;
-  border: 2px solid #fcfaf9;
-  background-color: #fcfaf9;
-  color: #191826;
+  border: 2px solid hsl(20deg, 33%, 98%);
+  background-color: hsl(20deg, 33%, 98%);
+  color: hsl(244deg, 23%, 12%);
+  border: none;
+}
+.main__premium__android:hover {
+  background-color: hsl(33deg, 100%, 70%);
+  cursor: pointer;
 }
 
 .footer {
@@ -144,8 +155,8 @@ body {
 }
 .footer__text {
   font-weight: 400;
-  font-size: 16px;
-  line-height: 26px;
+  font-size: 1rem;
+  line-height: 1.625rem;
   color: #191826;
 }
 .footer__text--dark {
@@ -157,6 +168,10 @@ body {
 }
 .footer__image + .footer__image {
   margin-left: 20px;
+}
+.footer__image:hover {
+  cursor: pointer;
+  filter: invert(72%) sepia(32%) saturate(7223%) hue-rotate(326deg) brightness(101%) contrast(96%);
 }
 
 @media (min-width: 700px) {
@@ -187,15 +202,15 @@ body {
     margin: 95px 0 256px;
   }
   .main__hero__heading {
-    font-size: 64px;
-    line-height: 64px;
+    font-size: 4rem;
+    line-height: 4rem;
     letter-spacing: -0.727273px;
   }
   .main__hero__para {
     margin-top: 28px;
     font-weight: 400;
-    font-size: 18px;
-    line-height: 28px;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
   .main__phone {
     display: block;
@@ -220,5 +235,110 @@ body {
   }
   .footer {
     margin-top: 176px;
+    margin-bottom: 85px;
+  }
+  .footer__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .footer__text {
+    width: 53%;
+  }
+  .footer__images {
+    margin: 0;
+    display: flex;
+  }
+  .footer__image {
+    width: 20px;
+    height: 20px;
+  }
+}
+@media (min-width: 1200px) {
+  body {
+    background-image: url(../assets/bg-main-desktop.png);
+  }
+  .header,
+.main,
+.footer {
+    margin-left: 165px;
+    margin-right: 165px;
+  }
+  .header__background {
+    top: -40px;
+    right: 0;
+    width: 312px;
+    height: 468px;
+  }
+  .main__hero {
+    width: 78%;
+    margin: 127px 0 321px;
+  }
+  .main__hero__heading {
+    font-size: 5.5rem;
+    line-height: 5.5rem;
+  }
+  .main__hero__para {
+    font-size: 1.25rem;
+    line-height: 2.125rem;
+  }
+  .main__phone {
+    margin-left: 0;
+    margin-right: 0;
+    background-position: top -40px left 335px;
+  }
+  .main__phone .phone {
+    margin-left: 102px;
+    width: 312px;
+    top: -213px;
+  }
+  .main__premium {
+    width: 31%;
+    margin-left: 569px;
+    margin-top: -510px;
+  }
+  .main__premium__wrapper {
+    margin: 0 54px 0 59px;
+  }
+  .main__premium .price-and-button-wrapper {
+    margin: 0 54px 0 59px;
+  }
+  .main__premium__heading {
+    font-size: 2.5rem;
+    line-height: 3.25rem;
+    margin-top: 58px;
+  }
+  .main__premium__para {
+    margin-top: 22px;
+    font-size: 1.25rem;
+    line-height: 2.125rem;
+  }
+  .main__premium__price {
+    margin-top: 39px;
+  }
+  .main__premium__android {
+    border: none;
+  }
+  .main__premium__ios {
+    margin-top: 46px;
+    border: none;
+  }
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 202px;
+    margin-bottom: 91px;
+  }
+  .footer__logo {
+    width: 146px;
+    height: 32px;
+  }
+  .footer__text {
+    margin: 0;
+    width: 366px;
+  }
+  .footer__images {
+    margin-left: 359px;
+    width: 100px;
   }
 }/*# sourceMappingURL=styles.css.map */
